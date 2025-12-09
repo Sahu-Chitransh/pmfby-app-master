@@ -13,6 +13,7 @@ import '../../localization/app_localizations.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import '../../services/weather_service.dart';
+import '../feedback/presentation/admin_feedback_screen.dart';
 
 enum OfficerLevel {
   national,
@@ -942,6 +943,20 @@ class _OfficerDashboardScreenState extends State<OfficerDashboardScreen> {
             Icons.assessment,
             Colors.purple,
           ),
+          _buildFeedbackManagementCard(
+            languageProvider.currentLanguage == 'hi' ? 'फीडबैक प्रबंधन' : 'Feedback Management',
+            languageProvider.currentLanguage == 'hi' 
+                ? 'किसानों की रिपोर्ट्स और सुझाव देखें' 
+                : 'View farmer reports and suggestions',
+            Icons.feedback,
+            Colors.deepPurple,
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AdminFeedbackScreen(),
+              ),
+            ),
+          ),
         ],
       ),
       ),
@@ -1578,6 +1593,46 @@ class _OfficerDashboardScreenState extends State<OfficerDashboardScreen> {
         trailing: IconButton(
           icon: const Icon(Icons.download),
           onPressed: () {},
+        ),
+      ),
+    );
+  }
+
+  Widget _buildFeedbackManagementCard(String title, String description, IconData icon, Color color, VoidCallback onTap) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 12),
+      child: ListTile(
+        onTap: onTap,
+        leading: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [color.withOpacity(0.2), color.withOpacity(0.1)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(icon, color: color),
+        ),
+        title: Text(
+          title,
+          style: GoogleFonts.poppins(
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        subtitle: Text(
+          description,
+          style: GoogleFonts.roboto(fontSize: 12),
+        ),
+        trailing: Container(
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.1),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(Icons.arrow_forward_ios, color: color, size: 16),
         ),
       ),
     );

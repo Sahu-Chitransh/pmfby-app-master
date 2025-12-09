@@ -24,6 +24,8 @@ import 'src/features/profile/presentation/profile_screen.dart';
 import 'src/features/complaints/presentation/screens/complaints_screen.dart';
 import 'src/features/complaints/presentation/screens/complaint_detail_screen.dart';
 import 'src/features/complaints/domain/models/complaint_model.dart';
+import 'src/features/feedback/presentation/feedback_report_screen.dart';
+import 'src/features/feedback/presentation/my_reports_screen.dart';
 
 import 'src/features/crop_monitoring/capture_image_screen.dart';
 import 'src/features/claims/file_claim_screen.dart';
@@ -327,6 +329,16 @@ GoRouter _buildRouter(BuildContext context) {
             },
           ),
         ],
+      ),
+
+      // FEEDBACK & REPORTS
+      GoRoute(
+        path: '/feedback-report',
+        builder: (_, __) => const FeedbackReportScreen(),
+      ),
+      GoRoute(
+        path: '/my-reports',
+        builder: (_, __) => const MyReportsScreen(),
       ),
     ],
   );
