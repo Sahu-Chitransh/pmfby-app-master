@@ -1,6 +1,10 @@
 # 🌾 KrishiBandhu - PMFBY Crop Insurance Mobile App
+- Making application easy for farmers and increasing the incredible efficiency of administration 
 
-![PMFBY App Banner](assets/images/avatars/forReadme/I0.png)
+<!-- <p align="center"> -->
+  <img src="assets/images/avatars/forReadme/I0.png" width="200"/>
+</p>
+
 
 > **Revolutionizing Crop Insurance for Indian Farmers**
 
@@ -98,20 +102,21 @@ A comprehensive Flutter mobile application designed to streamline the **PMFBY (P
 ### App Interface Walkthrough
 
 #### Login & Authentication
-![Login Screen](assets/images/avatars/forReadme/I1.png)
+<img src="assets/images/avatars/forReadme/I1.png" width="200"/>
 *Secure phone OTP login with bilingual interface*
 
 #### Dashboard & Home
-![Dashboard](assets/images/avatars/forReadme/I2.png)
+<img src="assets/images/avatars/forReadme/I2.png" width="200"/>
 *Main hub showing farm stats, weather, and quick actions*
 
 #### Image Capture with GPS
-![Image Capture](assets/images/avatars/forReadme/I3.png)
+<img src="assets/images/avatars/forReadme/I3.png" width="200"/>
 *Automatic GPS geotagging and location reverse geocoding*
 
 #### Claim Filing & Insurance Info
-![Claim Filing](assets/images/avatars/forReadme/I4.png)
+<img src="assets/images/avatars/forReadme/I4.png" width="200"/>
 *Detailed claim form with insurance scheme information*
+
 
 ---
 
